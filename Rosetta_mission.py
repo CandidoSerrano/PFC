@@ -17,9 +17,6 @@ def Rosetta():
     # from matplotlib import pyplot as plt
    
     # The comet is the 67P/Churyumov-Geramisenko
-   
-    # Steins = planet_mpcorb('02867   12.5   0.15 K156R 270.95697  251.13031   55.37206    9.93452  0.1454330  0.27123521   2.3635892  0 MPO332844  1677  21 1951-2015 0.44 M-v 38h MPCLINUX   0000   (2867)   Steins             20150328')
-    # Lutetia = planet_mpcorb('00021    7.35  0.11 K156R 340.94613  250.11664   80.88467    3.06362  0.1646490  0.25940848   2.4348933  0 MPO332812  3782  69 1866-2015 0.40 M-v 38h MPCLINUX   0000     (21)   Lutetia            20150321')
     churyumov = planet (epoch(7976),(3.4559747*AU, 0.6497023, 3.87139*DEG2RAD, 36.33226*DEG2RAD, 22.13412*DEG2RAD, 359.99129*DEG2RAD),MU_SUN,667.384,2000,2100,'67P Churyumov-Geramisenko')
     
     seq = [planet_ss('earth'), planet_ss('earth'), planet_ss('mars'), planet_ss('earth'), planet_ss('earth'), churyumov]
