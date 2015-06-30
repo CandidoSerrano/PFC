@@ -212,7 +212,7 @@ class mga_1dsm_tof(base_problem):
 			r,v = propagate_lagrangian(r_P[i],v_out,x[7+(i-1)*3]*T[i]*DAY2SEC,self.common_mu)
 			print "DSM after " + str(x[7+(i-1)*3]*T[i]) + " days"
 			#Lambert arc to reach Earth during (1-nu2)*T2 (second segment)
-			dt = (1-x[7+(i-1)*4])*T[i]*DAY2SEC
+			dt = (1-x[7+(i-1)*3])*T[i]*DAY2SEC
 			l = lambert_problem(r,r_P[i+1],dt,self.common_mu, False, False)
 			v_end_l = l.get_v2()[0]
 			v_beg_l = l.get_v1()[0]
@@ -294,7 +294,7 @@ class mga_1dsm_tof(base_problem):
 			r,v = propagate_lagrangian(r_P[i],v_out,x[7+(i-1)*3]*T[i]*DAY2SEC,self.common_mu)
 			plot_kepler(r_P[i],v_out,x[7+(i-1)*3]*T[i]*DAY2SEC,self.common_mu,N = 100, color='b', legend=False, units = AU, ax=axis)
 			#Lambert arc to reach Earth during (1-nu2)*T2 (second segment)
-			dt = (1-x[7+(i-1)*4])*T[i]*DAY2SEC
+			dt = (1-x[7+(i-1)*3])*T[i]*DAY2SEC
 
 			l = lambert_problem(r,r_P[i+1],dt,self.common_mu, False, False)
 			plot_lambert(l, sol = 0, color='r', legend=False, units = AU, N=1000, ax=axis)
